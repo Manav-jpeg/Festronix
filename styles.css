@@ -64,24 +64,23 @@ footer .social-links svg{width:14px;height:14px}
 }
 
 /* flying creature */
-.flyer-wrap{position:fixed;top:14%;left:0;width:64px;z-index:6;pointer-events:none;animation:flyer-path 24s ease-in-out infinite}
-.flyer{width:100%;height:auto;filter:drop-shadow(0 0 10px #8ee9da90)}
-.wing{transform-box:fill-box;animation:wing-flap .35s ease-in-out infinite alternate}
-.wing.left{transform-origin:100% 50%}
-.wing.right{transform-origin:0% 50%;animation-delay:.05s}
-@keyframes wing-flap{0%{transform:scaleY(1)}100%{transform:scaleY(.35)}}
+.flyer-wrap{position:fixed;top:14%;left:0;width:105px;z-index:6;pointer-events:none;animation:flyer-path 26s ease-in-out infinite}
+.flyer{width:100%;height:auto;filter:drop-shadow(0 0 12px #8ee9da80)}
+.wing{transform-box:fill-box;transform-origin:85% 50%;animation:wing-flap .6s ease-in-out infinite alternate}
+.wing.far{animation-delay:.08s}
+@keyframes wing-flap{0%{transform:scaleY(1) rotate(0deg)}100%{transform:scaleY(.55) rotate(-8deg)}}
 @keyframes flyer-path{
-  0%{transform:translate(-10vw,8vh) rotate(-5deg);opacity:0}
+  0%{transform:translate(-15vw,8vh) rotate(-5deg);opacity:0}
   8%{opacity:1}
   25%{transform:translate(22vw,-4vh) rotate(4deg)}
   50%{transform:translate(52vw,10vh) rotate(-4deg)}
   75%{transform:translate(80vw,-6vh) rotate(5deg)}
   92%{opacity:1}
-  100%{transform:translate(108vw,4vh) rotate(2deg);opacity:0}
+  100%{transform:translate(112vw,4vh) rotate(2deg);opacity:0}
 }
 
 /* circuit trace dividers */
-.circuit-divider{display:block;width:100%;height:44px}
+.circuit-divider{display:block;width:100%;height:44px;background:#03090ac9}
 .circuit-divider path{fill:none;stroke:#8ee9da33;stroke-width:2}
 .circuit-divider .node{fill:var(--cyan);opacity:.55}
 
@@ -89,4 +88,4 @@ footer .social-links svg{width:14px;height:14px}
 .circuit-bg{position:relative}
 .circuit-bg::before{content:"";position:absolute;inset:0;background-image:linear-gradient(#8ee9da14 1px,transparent 1px),linear-gradient(90deg,#8ee9da14 1px,transparent 1px);background-size:38px 38px;opacity:.4;pointer-events:none;-webkit-mask-image:radial-gradient(ellipse at center,#000 0%,transparent 72%);mask-image:radial-gradient(ellipse at center,#000 0%,transparent 72%)}
 
-@media(max-width:850px){.flyer-wrap{width:44px}}
+@media(max-width:850px){.flyer-wrap{width:68px}}
