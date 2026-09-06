@@ -14,16 +14,70 @@
 <div class="buttons"><a class="btn primary" href="#events">Explore Events ↓</a><a class="btn ghost" href="#register">Register Now ↗</a></div>
 <div class="date">10 SEPTEMBER 2026 • SVPCET • NAGPUR</div>
 </div></section>
-<section class="section" id="events"><div class="section-head"><p class="eyebrow">THE WORLD AWAITS</p><h2>CHOOSE YOUR <span>PATH</span></h2></div>
+<section class="section" id="events"><div class="section-head reveal"><p class="eyebrow">THE WORLD AWAITS</p><h2>CHOOSE YOUR <span>PATH</span></h2></div>
 <div class="events">
-<a class="event" href="kasra-clash.html"><div class="event-art"><img src="assets/kasra.png" alt="Kasra Clash"></div><div class="event-copy"><span class="event-no">01 / BUILD • TRADE • ADAPT</span><h3>KASRA CLASH</h3><p>Build smart. Trade wisely. Adapt quickly. Conquer Pandora.</p><span class="enter-link">ENTER KASRA →</span></div></a>
-<a class="event" href="electrohunt.html"><div class="event-art"><img src="assets/electrohunt.png" alt="ElectroHunt"></div><div class="event-copy"><span class="event-no">02 / DECODE • GUESS • HUNT</span><h3>ELECTROHUNT</h3><p>Crack the clues, follow the trail, and hunt for the components.</p><span class="enter-link">BEGIN THE HUNT →</span></div></a>
-<a class="event" href="idearena.html"><div class="event-art"><img src="assets/idearena.png" alt="IdeArena"></div><div class="event-copy"><span class="event-no">03 / THINK • CREATE • PITCH</span><h3>IDEARENA</h3><p>Turn a powerful idea into a solution with real-world impact.</p><span class="enter-link">ENTER IDEARENA →</span></div></a>
+<a class="event reveal" href="kasra-clash.html"><div class="event-art"><img src="assets/kasra.png" alt="Kasra Clash"></div><div class="event-copy"><span class="event-no">01 / BUILD • TRADE • ADAPT</span><h3>KASRA CLASH</h3><p>Build smart. Trade wisely. Adapt quickly. Conquer Pandora.</p><span class="enter-link">ENTER KASRA →</span></div></a>
+<a class="event reveal" href="electrohunt.html"><div class="event-art"><img src="assets/electrohunt.png" alt="ElectroHunt"></div><div class="event-copy"><span class="event-no">02 / DECODE • GUESS • HUNT</span><h3>ELECTROHUNT</h3><p>Crack the clues, follow the trail, and hunt for the components.</p><span class="enter-link">BEGIN THE HUNT →</span></div></a>
+<a class="event reveal" href="idearena.html"><div class="event-art"><img src="assets/idearena.png" alt="IdeArena"></div><div class="event-copy"><span class="event-no">03 / THINK • CREATE • PITCH</span><h3>IDEARENA</h3><p>Turn a powerful idea into a solution with real-world impact.</p><span class="enter-link">ENTER IDEARENA →</span></div></a>
 </div></section>
-<section class="section" id="register"><div class="section-head"><p class="eyebrow">THE JOURNEY STARTS HERE</p><h2>READY TO <span>ENTER PANDORA?</span></h2></div><div class="buttons" style="justify-content:flex-start"><a class="btn primary" href="#" onclick="document.getElementById('qr-overlay').style.display='flex';return false">Register Now ↗</a></div></section>
+<section class="section" id="register"><div class="section-head reveal"><p class="eyebrow">THE JOURNEY STARTS HERE</p><h2>READY TO <span>ENTER PANDORA?</span></h2></div><div class="buttons" style="justify-content:flex-start"><a class="btn primary" href="#" onclick="document.getElementById('qr-overlay').style.display='flex';return false">Register Now ↗</a></div></section>
 <div id="qr-overlay" onclick="this.style.display='none'" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,0.85);z-index:999;align-items:center;justify-content:center;cursor:pointer">
 <img src="assets/phonepe-qr.png" style="max-width:90%;max-height:90%;border-radius:12px" alt="Scan to pay">
 </div>
-<section class="section" id="about"><div class="section-head"><p class="eyebrow">FESTRONIX 2026</p><h2>ETC DEPARTMENT<br><span>SVPCET NAGPUR</span></h2><p>Department of Electronics & Telecommunication Engineering, St. Vincent Pallotti College of Engineering & Technology.</p></div></section>
-<section class="section" id="contact"><div class="section-head"><p class="eyebrow">NEED A GUIDE?</p><h2>CONTACT THE <span>TEAM</span></h2></div><p style="font-size:18px;color:#b9cbc6">Coordinator: <b>Riddhesh Yadav</b> — <a href="tel:9981812206">9981812206</a><br>Co-Coordinator: <b>Kuldeep Gautam</b> — <a href="tel:9301353429">9301353429</a></p></section>
-</main><footer><span>FESTRONIX 2026</span><span>ETC DEPARTMENT • SVPCET • NAGPUR</span><span>ENTER PANDORA 🌌</span></footer></body></html>
+<section class="section" id="about"><div class="section-head reveal"><p class="eyebrow">FESTRONIX 2026</p><h2>ETC DEPARTMENT<br><span>SVPCET NAGPUR</span></h2><p>Department of Electronics & Telecommunication Engineering, St. Vincent Pallotti College of Engineering & Technology.</p></div></section>
+<section class="section" id="contact"><div class="section-head reveal"><p class="eyebrow">NEED A GUIDE?</p><h2>CONTACT THE <span>TEAM</span></h2></div><p style="font-size:18px;color:#b9cbc6">Coordinator: <b>Riodhesh Yadav</b> — <a href="tel:9981812206">9981812206</a><br>Co-Coordinator: <b>Kuldeep Gautam</b> — <a href="tel:9301353429">9301353429</a></p></section>
+</main>
+
+<button id="music-toggle" aria-label="Toggle music" onclick="toggleMusic()">🔇</button>
+<audio id="bg-music" src="assets/bg-music.mp3" loop muted></audio>
+
+<footer><span>FESTRONIX 2026</span><span>ETC DEPARTMENT • SVPCET • NAGPUR</span><span>ENTER PANDORA 🌌</span></footer>
+
+<script>
+// scroll-reveal
+const reveals = document.querySelectorAll('.reveal');
+const io = new IntersectionObserver((entries)=>{
+  entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('visible'); io.unobserve(e.target); } });
+},{threshold:0.15});
+reveals.forEach(el=>io.observe(el));
+
+// nav shrink on scroll
+const nav = document.querySelector('.nav');
+window.addEventListener('scroll', ()=>{
+  nav.classList.toggle('scrolled', window.scrollY > 40);
+});
+
+// hero parallax
+const heroBg = document.body;
+window.addEventListener('scroll', ()=>{
+  const y = window.scrollY;
+  document.body.style.setProperty('--parallax', (y*0.15)+'px');
+});
+
+// card tilt
+document.querySelectorAll('.event').forEach(card=>{
+  card.addEventListener('mousemove', (e)=>{
+    const r = card.getBoundingClientRect();
+    const x = e.clientX - r.left, y = e.clientY - r.top;
+    const rx = ((y / r.height) - 0.5) * -10;
+    const ry = ((x / r.width) - 0.5) * 10;
+    card.style.transform = `perspective(700px) rotateX(${rx}deg) rotateY(${ry}deg) translateY(-8px)`;
+  });
+  card.addEventListener('mouseleave', ()=>{ card.style.transform=''; });
+});
+
+// background music toggle
+function toggleMusic(){
+  const audio = document.getElementById('bg-music');
+  const btn = document.getElementById('music-toggle');
+  if(audio.paused){
+    audio.muted = false;
+    audio.play();
+    btn.textContent = '🔊';
+  } else {
+    audio.pause();
+    btn.textContent = '🔇';
+  }
+}
+</script>
+</body></html>
