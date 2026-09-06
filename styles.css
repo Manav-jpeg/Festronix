@@ -39,7 +39,7 @@ footer{padding:25px 7vw;border-top:1px solid #ffffff14;display:flex;justify-cont
 .prize-tag{font:600 9px Orbitron;letter-spacing:1.5px;color:#7fd9ca}
 .prize-amount{font:800 44px Orbitron,sans-serif;margin:14px 0 8px;background:linear-gradient(180deg,#c9fff5,var(--cyan) 60%,#4fc9b8);-webkit-background-clip:text;background-clip:text;color:transparent;text-shadow:0 0 20px #8ee9da80}
 .prize-card h3{font:700 12px Orbitron;letter-spacing:1.5px;margin:0;color:var(--text)}
-.prize-total{text-align:center;margin-top:35px;color:#a1b7b1;font:600 11px Orbitron;letter-spacing:1.5px}
+.prize-total{text-align:center;margin-top:35px;color:#a1b7b1;font:600 16px Orbitron;letter-spacing:1.5px}
 .prize-total b{color:var(--cyan)}
 
 /* social links */
