@@ -50,6 +50,9 @@ footer{padding:25px 7vw;border-top:1px solid #ffffff14;display:flex;justify-cont
 footer .social-links{margin-top:0}
 footer .social-links a{width:30px;height:30px}
 footer .social-links svg{width:14px;height:14px}
+.insta-link{width:auto!important;padding:0 18px;gap:10px;border-radius:999px}
+.insta-link svg{width:22px;height:22px}
+.insta-link span{font:600 15px Quicksand;letter-spacing:.3px;color:var(--cyan)}
 
 @media(max-width:850px){.navlinks{display:none}.nav-logo img{width:125px}.hero{padding-top:125px}.hero-logo{width:92vw}.events,.detail-grid,.prizes{grid-template-columns:1fr}.section{padding:85px 6vw}.event{min-height:0}.event-art{height:300px}.detail-page{padding:125px 6vw 70px}.detail-grid{gap:35px}.detail-logo{max-height:380px}footer{flex-direction:column}.cd-box{min-width:64px;padding:12px 6px}.cd-box span{font-size:24px}}
 
@@ -64,7 +67,7 @@ footer .social-links svg{width:14px;height:14px}
 }
 
 /* circuit trace dividers */
-.circuit-divider{display:block;width:100%;height:44px;background:#03090ac9}
+.circuit-divider{display:block;width:100%;height:44px;background:none}
 .circuit-divider path{fill:none;stroke:#8ee9da33;stroke-width:2}
 .circuit-divider .node{fill:var(--cyan);opacity:.55}
 
