@@ -47,13 +47,6 @@ window.addEventListener('scroll', ()=>{
   nav.classList.toggle('scrolled', window.scrollY > 40);
 });
 
-// hero parallax
-const heroBg = document.body;
-window.addEventListener('scroll', ()=>{
-  const y = window.scrollY;
-  document.body.style.setProperty('--parallax', (y*0.15)+'px');
-});
-
 // card tilt
 document.querySelectorAll('.event').forEach(card=>{
   card.addEventListener('mousemove', (e)=>{
