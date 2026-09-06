@@ -1,5 +1,16 @@
 <!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Festronix 2026 | Enter Pandora</title><link rel="stylesheet" href="styles.css"></head><body>
 
+<div class="spores" aria-hidden="true"></div>
+<div class="flyer-wrap" aria-hidden="true">
+<svg class="flyer" viewBox="0 0 120 60" xmlns="http://www.w3.org/2000/svg">
+<g class="wing left"><path d="M55,30 C35,10 10,15 5,30 C10,45 35,50 55,30 Z" fill="#8ee9da" opacity="0.55"/></g>
+<g class="wing right"><path d="M65,30 C85,10 110,15 115,30 C110,45 85,50 65,30 Z" fill="#8ee9da" opacity="0.55"/></g>
+<ellipse cx="60" cy="30" rx="14" ry="6" fill="#cdfff5"/>
+<path d="M60,30 C68,34 78,36 86,34" stroke="#cdfff5" stroke-width="2" fill="none" stroke-linecap="round"/>
+<circle cx="52" cy="28" r="1.6" fill="#0a2e29"/>
+</svg>
+</div>
+
 <header class="nav">
 <a class="nav-logo" href="index.html"><img src="assets/festronix.png" alt="Festronix 2026"></a>
 <nav class="navlinks"><a href="index.html#events">Events</a><a href="index.html#about">About</a><a href="index.html#contact">Contact</a><a class="cta" href="index.html#register">Register</a></nav>
@@ -21,14 +32,20 @@
 </div>
 </div></section>
 
-<section class="section" id="events"><div class="section-head reveal"><p class="eyebrow">THE WORLD AWAITS</p><h2>CHOOSE YOUR <span>PATH</span></h2></div>
+<svg class="circuit-divider" viewBox="0 0 1200 44" preserveAspectRatio="none" aria-hidden="true">
+<path d="M0,22 L220,22 L250,6 L420,6 L450,22 L720,22 L750,38 L1000,38 L1030,22 L1200,22"/>
+<circle class="node" cx="250" cy="6" r="3.5"/><circle class="node" cx="450" cy="22" r="3.5"/><circle class="node" cx="750" cy="38" r="3.5"/><circle class="node" cx="1030" cy="22" r="3.5"/>
+<circle r="4" fill="var(--cyan)"><animateMotion dur="4.5s" repeatCount="indefinite" path="M0,22 L220,22 L250,6 L420,6 L450,22 L720,22 L750,38 L1000,38 L1030,22 L1200,22"/></circle>
+</svg>
+
+<section class="section circuit-bg" id="events"><div class="section-head reveal"><p class="eyebrow">THE WORLD AWAITS</p><h2>CHOOSE YOUR <span>PATH</span></h2></div>
 <div class="events">
 <a class="event reveal" href="kasra-clash.html"><div class="event-art"><img src="assets/kasra.png" alt="Kasra Clash"></div><div class="event-copy"><span class="event-no">01 / BUILD • TRADE • ADAPT</span><h3>KASRA CLASH</h3><p>Build smart. Trade wisely. Adapt quickly. Conquer Pandora.</p><span class="enter-link">ENTER KASRA →</span></div></a>
 <a class="event reveal" href="electrohunt.html"><div class="event-art"><img src="assets/electrohunt.png" alt="ElectroHunt"></div><div class="event-copy"><span class="event-no">02 / DECODE • GUESS • HUNT</span><h3>ELECTROHUNT</h3><p>Crack the clues, follow the trail, and hunt for the components.</p><span class="enter-link">BEGIN THE HUNT →</span></div></a>
 <a class="event reveal" href="idearena.html"><div class="event-art"><img src="assets/idearena.png" alt="IdeArena"></div><div class="event-copy"><span class="event-no">03 / THINK • CREATE • PITCH</span><h3>IDEARENA</h3><p>Turn a powerful idea into a solution with real-world impact.</p><span class="enter-link">ENTER IDEARENA →</span></div></a>
 </div></section>
 
-<section class="section" id="prizes"><div class="section-head reveal"><p class="eyebrow">WHAT'S AT STAKE</p><h2>PRIZE <span>POOL</span></h2></div>
+<section class="section circuit-bg" id="prizes"><div class="section-head reveal"><p class="eyebrow">WHAT'S AT STAKE</p><h2>PRIZE <span>POOL</span></h2></div>
 <div class="prizes">
 <div class="prize-card reveal"><span class="prize-tag">KASRA CLASH</span><div class="prize-amount">₹2,000</div></div>
 <div class="prize-card reveal"><span class="prize-tag">ELECTROHUNT</span><div class="prize-amount">₹2,000</div></div>
@@ -37,6 +54,12 @@
 <p class="winner-note reveal">WINNER TAKES IT ALL</p>
 <p class="prize-total reveal">TOTAL PRIZE POOL — <b>₹7,000</b></p>
 </section>
+
+<svg class="circuit-divider" viewBox="0 0 1200 44" preserveAspectRatio="none" aria-hidden="true">
+<path d="M0,30 L180,30 L210,14 L500,14 L530,30 L800,30 L830,10 L1050,10 L1080,30 L1200,30"/>
+<circle class="node" cx="210" cy="14" r="3.5"/><circle class="node" cx="530" cy="30" r="3.5"/><circle class="node" cx="830" cy="10" r="3.5"/><circle class="node" cx="1080" cy="30" r="3.5"/>
+<circle r="4" fill="var(--cyan)"><animateMotion dur="5s" repeatCount="indefinite" path="M0,30 L180,30 L210,14 L500,14 L530,30 L800,30 L830,10 L1050,10 L1080,30 L1200,30"/></circle>
+</svg>
 
 <section class="section" id="register"><div class="section-head reveal"><p class="eyebrow">THE JOURNEY STARTS HERE</p><h2>READY TO <span>ENTER PANDORA?</span></h2></div><div class="buttons" style="justify-content:flex-start"><a class="btn primary" href="#" onclick="document.getElementById('qr-overlay').style.display='flex';return false">Register Now ↗</a></div></section>
 <div id="qr-overlay" onclick="this.style.display='none'" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,0.85);z-index:999;align-items:center;justify-content:center;cursor:pointer">
@@ -130,6 +153,28 @@ function toggleMusic(){
   }
   tick();
   const timer = setInterval(tick, 1000);
+})();
+
+// ambient bioluminescent spores
+(function(){
+  const container = document.querySelector('.spores');
+  if(!container) return;
+  const count = 26;
+  for(let i=0;i<count;i++){
+    const s = document.createElement('div');
+    s.className = 'spore';
+    const size = 2 + Math.random()*3;
+    const duration = 10 + Math.random()*14;
+    const delay = Math.random()*-24;
+    const drift = Math.round(Math.random()*80-40)+'px';
+    s.style.left = (Math.random()*100)+'vw';
+    s.style.width = size+'px';
+    s.style.height = size+'px';
+    s.style.animationDuration = duration+'s';
+    s.style.animationDelay = delay+'s';
+    s.style.setProperty('--drift', drift);
+    container.appendChild(s);
+  }
 })();
 </script>
 </body></html>
