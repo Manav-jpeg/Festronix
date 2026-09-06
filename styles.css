@@ -52,3 +52,41 @@ footer .social-links a{width:30px;height:30px}
 footer .social-links svg{width:14px;height:14px}
 
 @media(max-width:850px){.navlinks{display:none}.nav-logo img{width:125px}.hero{padding-top:125px}.hero-logo{width:92vw}.events,.detail-grid,.prizes{grid-template-columns:1fr}.section{padding:85px 6vw}.event{min-height:0}.event-art{height:300px}.detail-page{padding:125px 6vw 70px}.detail-grid{gap:35px}.detail-logo{max-height:380px}footer{flex-direction:column}.cd-box{min-width:64px;padding:12px 6px}.cd-box span{font-size:24px}}
+
+/* ambient bioluminescent spores (live wallpaper) */
+.spores{position:fixed;inset:0;z-index:-1;pointer-events:none;overflow:hidden}
+.spore{position:absolute;bottom:-20px;border-radius:50%;background:var(--cyan);box-shadow:0 0 8px 2px #8ee9daa0;opacity:0;animation-name:spore-rise;animation-timing-function:ease-in;animation-iteration-count:infinite}
+@keyframes spore-rise{
+  0%{transform:translate(0,0);opacity:0}
+  12%{opacity:.85}
+  85%{opacity:.4}
+  100%{transform:translate(var(--drift,20px),-110vh);opacity:0}
+}
+
+/* flying creature */
+.flyer-wrap{position:fixed;top:14%;left:0;width:64px;z-index:6;pointer-events:none;animation:flyer-path 24s ease-in-out infinite}
+.flyer{width:100%;height:auto;filter:drop-shadow(0 0 10px #8ee9da90)}
+.wing{transform-box:fill-box;animation:wing-flap .35s ease-in-out infinite alternate}
+.wing.left{transform-origin:100% 50%}
+.wing.right{transform-origin:0% 50%;animation-delay:.05s}
+@keyframes wing-flap{0%{transform:scaleY(1)}100%{transform:scaleY(.35)}}
+@keyframes flyer-path{
+  0%{transform:translate(-10vw,8vh) rotate(-5deg);opacity:0}
+  8%{opacity:1}
+  25%{transform:translate(22vw,-4vh) rotate(4deg)}
+  50%{transform:translate(52vw,10vh) rotate(-4deg)}
+  75%{transform:translate(80vw,-6vh) rotate(5deg)}
+  92%{opacity:1}
+  100%{transform:translate(108vw,4vh) rotate(2deg);opacity:0}
+}
+
+/* circuit trace dividers */
+.circuit-divider{display:block;width:100%;height:44px}
+.circuit-divider path{fill:none;stroke:#8ee9da33;stroke-width:2}
+.circuit-divider .node{fill:var(--cyan);opacity:.55}
+
+/* faint circuit-grid texture behind a section */
+.circuit-bg{position:relative}
+.circuit-bg::before{content:"";position:absolute;inset:0;background-image:linear-gradient(#8ee9da14 1px,transparent 1px),linear-gradient(90deg,#8ee9da14 1px,transparent 1px);background-size:38px 38px;opacity:.4;pointer-events:none;-webkit-mask-image:radial-gradient(ellipse at center,#000 0%,transparent 72%);mask-image:radial-gradient(ellipse at center,#000 0%,transparent 72%)}
+
+@media(max-width:850px){.flyer-wrap{width:44px}}
