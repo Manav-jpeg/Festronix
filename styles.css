@@ -75,3 +75,4 @@ footer .social-links svg{width:14px;height:14px}
 /* faint circuit-grid texture behind a section */
 .circuit-bg{position:relative}
 .circuit-bg::before{content:"";position:absolute;inset:0;background-image:linear-gradient(#8ee9da14 1px,transparent 1px),linear-gradient(90deg,#8ee9da14 1px,transparent 1px);background-size:38px 38px;opacity:.4;pointer-events:none;-webkit-mask-image:radial-gradient(ellipse at center,#000 0%,transparent 72%);mask-image:radial-gradient(ellipse at center,#000 0%,transparent 72%)}
+.made-by{text-align:center;padding:14px 7vw;background:#020708;color:#5c7570;font:500 10px Quicksand;letter-spacing:.5px}
